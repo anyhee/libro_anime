@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "275606568291",
+    "project_id": "myanime-9545b",
+    "storage_bucket": "myanime-9545b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:275606568291:android:3729f9ecc282f9dcaa2756",
+        "android_client_info": {
+          "package_name": "com.example.libroflutter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "275606568291-6encu3uut2dsamtslfu9jsblf9fmeb9e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDV6umOWn_gMCXKOBQVahYrSIZ3cPa8l88"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "275606568291-6encu3uut2dsamtslfu9jsblf9fmeb9e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
