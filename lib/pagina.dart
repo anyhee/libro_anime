@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:libroflutter/provider/anime_api.dart';
 import 'package:libroflutter/provider/models.dart';
+import 'package:libroflutter/report_page.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter/material.dart';
+
 
 class AuthEntryPage extends StatelessWidget {
   @override
@@ -16,7 +19,7 @@ class AuthEntryPage extends StatelessWidget {
             SizedBox(height: 40,),
             Container(
               width: double.infinity,
-              height: MediaQuery.of(context).size.height / 1.2,
+              height: MediaQuery.of(context).size.height *.7,
               child: PageView(
                 children: anime.map((e) {
                   return PageViewItem(
@@ -37,13 +40,32 @@ class AuthEntryPage extends StatelessWidget {
             ),
             Row(mainAxisAlignment: MainAxisAlignment.center, children: [
               Container(
+                margin: EdgeInsets.all(20),
                 child:
                     const Text('Revisa informacion sobre lo ultimo en anime'),
-              )
+                    
+              ),
+              
             ]),
-            const SizedBox(
-              height: 30,
-            )
+           
+            MaterialButton(
+                  shape: RoundedRectangleBorder(
+                      borderRadius:
+                          BorderRadius.all(Radius.circular(20.0))),
+                  elevation: 5.0,
+                  height: 50,
+                  minWidth: MediaQuery.of(context).size.width,
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>ReportPage()));
+                  },
+                  child: Text(
+                    "Anotar en Bloc",
+                    style: TextStyle(
+                      fontSize: 20,
+                    ),
+                  ),
+                  color: Color.fromARGB(255, 223, 116, 172),
+                ),
           ],
         ),
       ),
@@ -206,8 +228,8 @@ class _AuthPageState extends State<AuthPage>
                             Navigator.pop(context);
                           },
                           child: Container(
-                            width: 50,
-                            height: 50,
+                            width: 30,
+                            height: 30,
                             decoration: const BoxDecoration(
                                 color: Colors.black, shape: BoxShape.circle),
                             child: const Center(
@@ -225,7 +247,7 @@ class _AuthPageState extends State<AuthPage>
                     decoration: BoxDecoration(
                         color: Colors.black,
                         borderRadius: BorderRadius.circular(30)),
-                    width: 240,
+                    width: MediaQuery.of(context).size.width*.6,
                     height: 40,
                     child: TabBar(
                       controller: _tabController,
